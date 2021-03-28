@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
 /* poppins-300 - latin */
@@ -38,13 +38,17 @@ const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
 }
 
-html{
-  font-size: 62.5%;
-}
 
-body{
-  font-family: 'Poppins', -app-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
-}
+${({ theme }) => css`
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    font-family: ${theme.font.family};
+    font-size: ${theme.font.sizes.medium};
+  }
+`}
 
 `
 export default GlobalStyles
