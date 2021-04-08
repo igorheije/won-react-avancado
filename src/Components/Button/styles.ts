@@ -29,10 +29,6 @@ const buttonModifiers = {
   `,
 
   withIcon: (theme: DefaultTheme) => css`
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
     svg {
       width: 1.5rem;
 
@@ -52,11 +48,14 @@ export const Wrapper = styled.button<WrapperProps>`
       #f23131 102.86%
     );
     border-radius: ${theme.border.radius};
-
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     cursor: pointer;
     font-weight: 500;
     color: ${theme.colors.white};
+    text-decoration: none;
 
     &:hover {
       background: linear-gradient(180deg, #e35565 0%, #d958a6 100%),
