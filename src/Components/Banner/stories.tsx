@@ -22,3 +22,8 @@ export const Basic: Story<BannerProps> = (args) => (
     <Banner {...args} />
   </div>
 )
+Basic.args = {
+  ribbon: 'My Ribbon',
+  ribbonSize: 'small',
+  ribbonColor: 'secondary'
+}
